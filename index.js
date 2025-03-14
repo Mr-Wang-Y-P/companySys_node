@@ -25,7 +25,7 @@ const websites = JSON.parse(fs.readFileSync(
 
 let websiteArr = JSON.parse(JSON.stringify(websites));
 
-app.get("/api", async (req, res) => {
+app.get("/", async (req, res) => {
   res.json({
     message: "Hello from the server!",
   });
