@@ -6,7 +6,7 @@ import fs from "fs";
 import QRCode from "qrcode";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3100;
 
 // 中间件
 app.use(cors());
@@ -24,6 +24,12 @@ const websites = JSON.parse(fs.readFileSync(
 ));
 
 let websiteArr = JSON.parse(JSON.stringify(websites));
+
+app.get("/api", async (req, res) => {
+  res.json({
+    message: "Hello from the server!",
+  });
+});
 // 模板API
 app.get("/api/templates", async (req, res) => {
   res.json(templates);
