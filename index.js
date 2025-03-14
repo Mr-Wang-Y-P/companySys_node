@@ -6,7 +6,7 @@ import fs from "fs";
 import QRCode from "qrcode";
 
 const app = express();
-const PORT = process.env.PORT || 3100;
+const PORT =  3100;
 
 // 中间件
 app.use(cors());
